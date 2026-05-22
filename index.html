@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hampshire Quality Plant Hire — Mini Digger Hire in Hampshire</title>
+  <meta name="description" content="Mini digger hire across Hampshire. Deal direct with the owner. Competitive rates, same-day delivery available. Call 07792 324526." />
+
+  <!-- GA4 Placeholder -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────────── */
+    :root {
+      --grey:       #484b52;
+      --grey-dark:  #35383d;
+      --grey-mid:   #5a5e67;
+      --red:        #b9252a;
+      --red-dark:   #9a1e22;
+      --yellow:     #fab928;
+      --yellow-dark:#e0a520;
+      --bg:         #e4e6e5;
+      --white:      #ffffff;
+      --text-dark:  #2a2c30;
+      --radius:     4px;
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body:    'Barlow', sans-serif;
+    }
+
+    /* ─── RESET ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── UTILITIES ──────────────────────────────────────────── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .btn-call {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .btn-call:hover { background: var(--red-dark); }
+    .btn-call-lg {
+      font-size: 1.25rem;
+      padding: 16px 36px;
+    }
+    .section-label {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+    }
+
+    /* ─── NAV ────────────────────────────────────────────────── */
+    nav {
+      background: var(--grey);
+      border-bottom: 3px solid var(--red);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 64px;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .nav-logo img { height: 50px; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; color: var(--yellow); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .nav-tel-label {
+      color: var(--yellow);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      background: var(--grey-dark);
+      padding: 16px 20px 20px;
+      border-bottom: 3px solid var(--red);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block;
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      opacity: 0.9;
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-cta {
+      margin-top: 16px;
+      display: block;
+      text-align: center;
+    }
+
+    /* ─── HERO ───────────────────────────────────────────────── */
+    .hero {
+      background: var(--bg);
+      padding: 60px 0 0;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-content { padding-bottom: 48px; }
+    .hero-badge {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+    }
+    .hero-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.05;
+      color: var(--yellow);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .hero-sub {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--grey);
+      margin-bottom: 20px;
+    }
+    .hero-body {
+      border-left: 4px solid var(--yellow);
+      padding-left: 16px;
+      color: var(--grey);
+      font-size: 1rem;
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+    .hero-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-tel {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--grey);
+      letter-spacing: 0.02em;
+    }
+    .hero-tagline {
+      display: block;
+      margin-top: 20px;
+    }
+    .hero-tagline-line {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--grey);
+      line-height: 1.15;
+      display: block;
+    }
+    .hero-tel-below {
+      margin-top: 12px;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--grey-mid);
+      letter-spacing: 0.02em;
+      display: block;
+    }
+    .hero-image-wrap {
+      position: relative;
+      text-align: center;
+    }
+    .hero-image-wrap img {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      border-radius: 6px;
+    }
+    .hero-photo-credit {
+      font-size: 0.75rem;
+      color: var(--grey-mid);
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    /* ─── CTA BANNER ─────────────────────────────────────────── */
+    .cta-banner {
+      background: var(--grey);
+      padding: 32px 0;
+      text-align: center;
+    }
+    .cta-banner .cta-banner-label {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--yellow) !important;
+      margin-bottom: 14px;
+      margin-top: 0;
+    }
+    .cta-banner p {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
+      margin-top: 12px;
+    }
+
+    /* ─── TRUST BAR ──────────────────────────────────────────── */
+    .trust-bar {
+      background: var(--grey);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 0 0 20px;
+    }
+    .trust-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--yellow);
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      opacity: 1;
+      padding: 8px 20px;
+      border-right: 1px solid rgba(255,255,255,0.15);
+    }
+    .trust-item:last-child { border-right: none; }
+    .trust-item svg { flex-shrink: 0; }
+
+    /* ─── ABOUT ──────────────────────────────────────────────── */
+    .about {
+      padding: 72px 0;
+      background: var(--bg);
+    }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .about-text h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--grey);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .about-text p {
+      color: var(--grey-mid);
+      margin-bottom: 16px;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .about-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .highlight-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--red);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .highlight-icon svg { color: white; }
+    .highlight-text strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--grey);
+    }
+    .highlight-text span {
+      font-size: 0.9rem;
+      color: var(--grey-mid);
+    }
+    .about-image {
+      position: relative;
+    }
+    .about-image img {
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+    .about-image-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--grey);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    }
+    .about-image-placeholder span {
+      color: rgba(255,255,255,0.35);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ─── EQUIPMENT ──────────────────────────────────────────── */
+    .equipment {
+      background: var(--grey-dark);
+      padding: 72px 0;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.1;
+    }
+    .section-header p {
+      color: rgba(255,255,255,0.6);
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+    .equipment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .equipment-card {
+      background: var(--grey);
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .equipment-card-image img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+    .equipment-card-image-placeholder {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--grey-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .equipment-card-image-placeholder span {
+      color: rgba(255,255,255,0.25);
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .equipment-card-body { padding: 24px; }
+    .equipment-card-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 8px;
+    }
+    .equipment-card-body p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.93rem;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .spec-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 16px;
+    }
+    .spec-list li {
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,0.55);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .spec-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--yellow);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .operator-card {
+      grid-column: 1 / -1;
+      background: var(--red);
+      border-radius: 6px;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .operator-card-text h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .operator-card-text p {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.93rem;
+      max-width: 560px;
+    }
+    .btn-call-outline {
+      display: inline-block;
+      border: 2px solid var(--white);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 11px 24px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .btn-call-outline:hover { background: var(--white); color: var(--red); }
+
+    /* ─── PRICING ────────────────────────────────────────────── */
+    .pricing {
+      background: var(--bg);
+      padding: 72px 0;
+    }
+    .pricing .section-header h2 { color: var(--grey); }
+    .pricing .section-header p { color: var(--grey-mid); }
+    .pricing-table-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    }
+    thead tr {
+      background: var(--grey);
+    }
+    thead th {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.7);
+      padding: 14px 20px;
+      text-align: left;
+    }
+    thead th:not(:first-child) { text-align: right; }
+    tbody tr {
+      background: var(--white);
+      border-bottom: 1px solid #dde0df;
+      transition: background 0.15s;
+    }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: #f4f5f4; }
+    tbody td {
+      padding: 16px 20px;
+      font-size: 1rem;
+      color: var(--grey);
+    }
+    tbody td:first-child {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    tbody td:not(:first-child) { text-align: right; }
+    .td-exvat {
+      color: var(--grey-mid);
+      font-weight: 500;
+      font-size: 0.95rem !important;
+    }
+    .td-incvat {
+      color: var(--yellow-dark);
+      font-weight: 700;
+      font-family: var(--font-display);
+      font-size: 1.15rem !important;
+      letter-spacing: 0.02em;
+    }
+    .pricing-note {
+      text-align: center;
+      margin-top: 16px;
+      color: var(--grey-mid);
+      font-size: 0.875rem;
+    }
+
+    /* ─── HOW IT WORKS ───────────────────────────────────────── */
+    .how {
+      background: var(--grey);
+      padding: 72px 0;
+    }
+    .how .section-header h2 { color: var(--white); }
+    .how .section-header p { color: rgba(255,255,255,0.6); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      position: relative;
+    }
+    .steps::before {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: calc(16.666% + 32px);
+      right: calc(16.666% + 32px);
+      height: 2px;
+      background: var(--yellow);
+      opacity: 0.3;
+    }
+    .step {
+      text-align: center;
+      position: relative;
+    }
+    .step-num {
+      width: 64px;
+      height: 64px;
+      background: var(--yellow);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--grey-dark);
+      position: relative;
+      z-index: 1;
+    }
+    .step h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .step p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.93rem;
+      line-height: 1.65;
+    }
+
+    /* ─── COVERAGE ───────────────────────────────────────────── */
+    .coverage {
+      background: var(--grey-dark);
+      padding: 72px 0;
+    }
+    .coverage .section-header h2 { color: var(--white); }
+    .coverage .section-header p { color: rgba(255,255,255,0.6); }
+    .town-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .town-tag {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.75);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 7px 14px;
+      border-radius: var(--radius);
+      transition: background 0.2s, color 0.2s;
+    }
+    .town-tag:hover {
+      background: var(--yellow);
+      color: var(--grey-dark);
+      border-color: var(--yellow);
+    }
+
+    /* ─── FINAL CTA ──────────────────────────────────────────── */
+    .final-cta {
+      background: var(--grey);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--yellow);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .final-cta p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+    }
+    .final-cta-tel {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.04em;
+      margin-top: 14px;
+    }
+
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    footer {
+      background: var(--text-dark);
+      border-top: 3px solid var(--red);
+      padding: 40px 0 28px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 32px;
+    }
+    .footer-logo img { height: 44px; margin-bottom: 12px; }
+    .footer-tagline {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 14px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li {
+      margin-bottom: 8px;
+    }
+    .footer-col ul li a {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-contact-item {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+    .footer-contact-item a { color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    .footer-contact-item a:hover { color: var(--white); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .footer-bottom p {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.8rem;
+    }
+    .footer-bottom a { color: rgba(255,255,255,0.3); transition: color 0.2s; }
+    .footer-bottom a:hover { color: rgba(255,255,255,0.6); }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-tel-label { display: none; }
+      .hamburger { display: flex; }
+
+      .hero { padding: 40px 0 0; }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .hero-content { padding-bottom: 0; order: 1; }
+      .hero-image-wrap { order: 2; }
+
+      .about-inner { grid-template-columns: 1fr; gap: 32px; }
+      .about-image { order: -1; }
+
+      .equipment-grid { grid-template-columns: 1fr; }
+      .operator-card { flex-direction: column; text-align: center; }
+      .operator-card-text p { max-width: none; }
+
+      .steps { grid-template-columns: 1fr; }
+      .steps::before { display: none; }
+
+      .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+      .trust-items { flex-direction: column; align-items: center; }
+      .trust-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; justify-content: center; }
+      .trust-item:last-child { border-bottom: none; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-cta-row { flex-direction: column; align-items: flex-start; }
+      .spec-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAV ══════════════════════════════════════════════════ -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo" aria-label="Hampshire Quality Plant Hire — Home">
+      <img src="HQH_Logo_Hi-Res_White_Outline.png" alt="HQH Logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#equipment">Equipment</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#coverage">Coverage</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <span class="nav-tel-label">Call Now</span>
+      <a href="tel:+447792324526" class="btn-call" onclick="trackCall()">07792 324526</a>
+      <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#equipment" onclick="toggleMenu()">Equipment</a>
+  <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+  <a href="#coverage" onclick="toggleMenu()">Coverage</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="tel:+447792324526" class="btn-call mobile-cta" onclick="trackCall()">📞 07792 324526</a>
+</div>
+
+
+<!-- ═══ HERO ══════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <span class="hero-badge">Hampshire Plant Hire</span>
+      <h1 class="hero-h1">Mini Digger Hire Across Hampshire</h1>
+      <p class="hero-sub">From £150 for the first 24 hours</p>
+      <div class="hero-body">
+        <p>Same-day delivery. Fully insured. No hidden fees. Deal directly with the owner. Operators available for jobs that need it.</p>
+      </div>
+      <div class="hero-tagline">
+        <span class="hero-tagline-line">Delivered Fast.</span>
+        <span class="hero-tagline-line">Priced Right.</span>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="Digger_Photo.jpg" alt="Hampshire Quality Plant Hire — Kubota Mini Digger" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ CTA BANNER ════════════════════════════════════════════ -->
+<div class="cta-banner">
+  <p class="cta-banner-label">GET AN INSTANT QUOTE OVER THE PHONE</p>
+  <a href="tel:+447792324526" class="btn-call btn-call-lg" onclick="trackCall()">📞 Call — 07792 324526</a>
+  <p>Mon–Sat: 7am–7pm &nbsp;|&nbsp; Sun: 8am–4pm &nbsp;|&nbsp; Weekend hire available</p>
+</div>
+
+
+<!-- ═══ TRUST BAR ═════════════════════════════════════════════ -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-items">
+      <div class="trust-item">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+        Same-Day Delivery Available
+      </div>
+      <div class="trust-item">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        Fully Insured
+      </div>
+      <div class="trust-item">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        No Hidden Fees
+      </div>
+      <div class="trust-item">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+        Deal Direct With Owner
+      </div>
+      <div class="trust-item">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        Weekend Hire Available
+      </div>
+      <div class="trust-item">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        Operators for Hire
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ ABOUT ══════════════════════════════════════════════════ -->
+<section class="about" id="about">
+  <div class="container about-inner">
+    <div class="about-text">
+      <span class="section-label">About HQH</span>
+      <h2 style="color: var(--yellow);">Hampshire Plant Hire — Done Properly</h2>
+      <p>Hampshire Quality Plant Hire is a family-run plant hire business operating across the whole of Hampshire. When you call us, you speak directly with the owner — not a booking team or call centre.</p>
+      <p>We hire out well-maintained Kubota mini diggers for residential and trade customers who need a machine without the fuss. Whether it's a garden project, drainage run, or groundworks prep, we'll get the right kit to you, when you need it.</p>
+      <div class="about-highlights">
+        <div class="about-highlight">
+          <div class="highlight-icon">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+          </div>
+          <div class="highlight-text">
+            <strong>Deal Direct With the Owner</strong>
+            <span>Straight answers on availability, delivery, and pricing.</span>
+          </div>
+        </div>
+        <div class="about-highlight">
+          <div class="highlight-icon">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div class="highlight-text">
+            <strong>Fully Insured, Well-Maintained Kit</strong>
+            <span>The machine is regularly serviced and fully insured for self-drive hire.</span>
+          </div>
+        </div>
+        <div class="about-highlight">
+          <div class="highlight-icon">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div class="highlight-text">
+            <strong>Hampshire's Go-to Plant Partner</strong>
+            <span>Reliable Machines, Fair Rates. Big Values. Support Local Business with HQH!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-image">
+      <!-- Replace with in-action photo when client provides -->
+      <div class="about-image-placeholder">
+        <span>Photo coming soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ EQUIPMENT ══════════════════════════════════════════════ -->
+<section class="equipment" id="equipment">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Our Equipment</span>
+      <h2>The Machines We Hire</h2>
+      <p>Our machines are in excellent condition — they're the right tool for most residential and light trade groundwork jobs.</p>
+    </div>
+    <div class="equipment-grid">
+      <div class="equipment-card">
+        <div class="equipment-card-image">
+          <img src="Digger_Photo.jpg" alt="Kubota U17-3α Mini Digger — Hampshire Quality Plant Hire" />
+        </div>
+        <div class="equipment-card-body">
+          <h3>Kubota U17-3α Mini Digger</h3>
+          <p>A versatile 1.7T excavator well suited to garden projects, drainage, footings, and general groundwork. Delivered to your site on a trailer.</p>
+          <ul class="spec-list">
+            <li>Weight: 1.7T</li>
+            <li>Zero tail swing</li>
+            <li>Min. access: 1100mm</li>
+            <li>Rubber tracks</li>
+            <li>Diesel powered</li>
+          </ul>
+        </div>
+      </div>
+      <div class="equipment-card">
+        <div class="equipment-card-image">
+          <img src="Breaker_Photo.png" alt="SISCO SC40 Concrete Breaker Attachment — Hampshire Quality Plant Hire" />
+        </div>
+        <div class="equipment-card-body">
+          <h3>Concrete Breaker</h3>
+          <p>Fully-silenced for minimum disruption while operating, but still packs a punch! Quickly and efficiently breaks up:</p>
+          <ul class="spec-list">
+            <li>Rock</li>
+            <li>Concrete</li>
+            <li>Tarmac</li>
+            <li>Solid Ground</li>
+          </ul>
+        </div>
+      </div>
+      <div class="operator-card">
+        <div class="operator-card-text">
+          <h3>Operators Available</h3>
+          <p>Don't have a CPCS card or prefer someone experienced on the controls? We can provide an operator with the machine. Ideal for trickier groundwork jobs or when you'd rather supervise than dig.</p>
+        </div>
+        <a href="tel:+447792324526" class="btn-call-outline" onclick="trackCall()">Call to Discuss</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ PRICING ════════════════════════════════════════════════ -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Pricing</span>
+      <h2 style="color: var(--yellow);">Transparent Hire Rates</h2>
+      <p>No surprises. Discount applied for multi-day rentals.</p>
+    </div>
+    <div class="pricing-table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Hire Period</th>
+            <th>Ex VAT</th>
+            <th>Inc VAT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>First 24 Hours</td>
+            <td class="td-exvat">£150</td>
+            <td class="td-incvat">£180</td>
+          </tr>
+          <tr>
+            <td>Additional 24 Hours</td>
+            <td class="td-exvat">£75</td>
+            <td class="td-incvat">£90</td>
+          </tr>
+          <tr>
+            <td>Weekend (Fri–Mon)</td>
+            <td class="td-exvat">£210</td>
+            <td class="td-incvat">£252</td>
+          </tr>
+          <tr>
+            <td>Week (5 Days)</td>
+            <td class="td-exvat">£360</td>
+            <td class="td-incvat">£432</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="pricing-note">Call To Discuss Operator Hire Pricing.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ HOW IT WORKS ══════════════════════════════════════════ -->
+<section class="how" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">How It Works</span>
+      <h2>Hire in Three Steps</h2>
+      <p>Simple process, no paperwork faff.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Call for a Quote</h3>
+        <p>Speak directly with the owner. Tell us your job, your location, and when you need the machine. We'll give you a straight price, no faff.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>We Deliver to Your Job</h3>
+        <p>We bring the machine to you, at a time and date of your choosing.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>We Collect When Done</h3>
+        <p>Once your hire period is up, we come and collect. Extensions available on request if you need more time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ COVERAGE ══════════════════════════════════════════════ -->
+<section class="coverage" id="coverage">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Coverage Area</span>
+      <h2>Serving Hampshire</h2>
+      <p>We deliver across Hampshire. Not sure if you're covered? Call us — we'll let you know.</p>
+    </div>
+    <div class="town-grid">
+      <span class="town-tag">Southampton</span>
+      <span class="town-tag">Winchester</span>
+      <span class="town-tag">Fareham</span>
+      <span class="town-tag">Eastleigh</span>
+      <span class="town-tag">Chandler's Ford</span>
+      <span class="town-tag">Romsey</span>
+      <span class="town-tag">Hedge End</span>
+      <span class="town-tag">Botley</span>
+      <span class="town-tag">Bishop's Waltham</span>
+      <span class="town-tag">Waterlooville</span>
+      <span class="town-tag">Havant</span>
+      <span class="town-tag">Petersfield</span>
+      <span class="town-tag">Alton</span>
+      <span class="town-tag">Alresford</span>
+      <span class="town-tag">Whitchurch</span>
+      <span class="town-tag">Andover</span>
+      <span class="town-tag">Basingstoke</span>
+      <span class="town-tag">Hook</span>
+      <span class="town-tag">Fleet</span>
+      <span class="town-tag">Farnborough</span>
+      <span class="town-tag">Titchfield</span>
+      <span class="town-tag">Wickham</span>
+      <span class="town-tag">Gosport</span>
+      <span class="town-tag">Lee-on-the-Solent</span>
+      <span class="town-tag">Portchester</span>
+      <span class="town-tag">Stubbington</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ FINAL CTA ══════════════════════════════════════════════ -->
+<section class="final-cta" id="contact">
+  <div class="container">
+    <h2>Ready to Book?</h2>
+    <p>Call now for availability and to secure your slot.</p>
+    <a href="tel:+447792324526" class="btn-call btn-call-lg" onclick="trackCall()">📞 Call 07792 324526</a>
+    <span class="final-cta-tel">Hampshire Quality Plant Hire &nbsp;·&nbsp; Mon–Sat 7am–7pm &nbsp;·&nbsp; Sun 8am–4pm</span>
+  </div>
+</section>
+
+
+<!-- ═══ FOOTER ═════════════════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <img src="HQH_Logo_Transp.png" alt="Hampshire Quality Plant Hire" />
+        </div>
+        <p class="footer-tagline">No Faff Mini Digger Hire across Hampshire. Same-day delivery. Fully insured.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About HQH</a></li>
+          <li><a href="#equipment">Equipment</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#coverage">Coverage Area</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <a href="tel:+447792324526">07792 324526</a>
+        </div>
+        <div class="footer-contact-item">Hampshire, UK</div>
+        <div class="footer-contact-item">Mon–Sat: 7am–7pm</div>
+        <div class="footer-contact-item">Sun: 8am–4pm</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Hampshire Quality Plant Hire. All rights reserved.</p>
+      <p>Mini digger hire across Hampshire &mdash; <a href="tel:+447792324526">07792 324526</a></p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══ SCRIPTS ════════════════════════════════════════════════ -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+  }
+
+  // Close mobile menu on nav link click
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.remove('open');
+    });
+  });
+
+  function trackCall() {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'call_click', {
+        event_category: 'engagement',
+        event_label: 'main_site_call',
+        send_to: 'G-XXXXXXXXXX'
+      });
+    }
+  }
+</script>
+
+</body>
+</html>
