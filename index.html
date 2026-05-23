@@ -1010,6 +1010,7 @@
       <p>Hampshire Quality Plant Hire is a family-run plant hire business operating across the whole of Hampshire. When you call us, you speak directly with the owner — not a booking team or call centre.</p>
       <p>We hire out well-maintained Kubota mini diggers for residential and trade customers who need a machine without the fuss. Whether it's a garden project, drainage run, or groundworks prep, we'll get the right kit to you, when you need it.</p>
      </div>
+    <div class="about-carousel-wrap">
    <div class="about-carousel">
       <div class="about-slide active" data-caption="1.7T Kubota Mini Digger">
         <img src="Digger_Photo.jpg" alt="1.7T Kubota Mini Digger">
@@ -1029,6 +1030,7 @@
       <span class="about-dot"></span>
     </div>
     <p class="about-caption">1.7T Kubota Mini Digger</p>
+    </div>
 </section>  
 
 <!-- ═══ EQUIPMENT ══════════════════════════════════════════════ -->
@@ -1272,21 +1274,23 @@
   }
   // About carousel
 (function() {
-  const slides = document.querySelectorAll('.about-slide');
+  (function() {
+  const carousel = document.querySelector('.about-carousel');
+  if (!carousel) return;
+  const slides = carousel.querySelectorAll('.about-slide');
   const dots = document.querySelectorAll('.about-dot');
-  let current = 0;
   const caption = document.querySelector('.about-caption');
+  let current = 0;
   function goTo(n) {
     slides[current].classList.remove('active');
     dots[current].classList.remove('active');
     current = (n + slides.length) % slides.length;
     slides[current].classList.add('active');
     dots[current].classList.add('active');
-    caption.textContent = slides[current].dataset.caption;
+    if (caption) caption.textContent = slides[current].dataset.caption;
   }
-  }
-  document.querySelector('.about-prev').addEventListener('click', () => goTo(current - 1));
-  document.querySelector('.about-next').addEventListener('click', () => goTo(current + 1));
+  carousel.querySelector('.about-prev').addEventListener('click', () => goTo(current - 1));
+  carousel.querySelector('.about-next').addEventListener('click', () => goTo(current + 1));
   dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
 })();
 </script>
