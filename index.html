@@ -263,7 +263,6 @@
     .hero-image-wrap {
       position: relative;
       text-align: center;
-      margin-bottom: 0;
       padding-bottom: 0;
     }
     .hero-image-wrap img {
@@ -811,13 +810,13 @@
       .nav-tel-label { display: none; }
       .hamburger { display: flex; }
 
-      .hero { padding: 40px 0 0; }
+      .hero { padding: 40px 0 0; overflow: hidden; }
       .hero-inner {
         grid-template-columns: 1fr;
         gap: 32px;
       }
       .hero-content { padding-bottom: 0; order: 1; }
-      .hero-image-wrap { order: 2; }
+      .hero-image-wrap { order: 2; margin-bottom: -40px; }
 
       .about-inner { grid-template-columns: 1fr; gap: 32px; }
       .about-image { order: -1; }
