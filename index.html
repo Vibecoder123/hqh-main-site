@@ -875,10 +875,18 @@
 .about-prev { left: 10px; }
 .about-next { right: 10px; }
 .about-dots {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
   text-align: center;
+  padding: 10px 0 4px;
+}
+.about-caption {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  margin: 0 0 4px;
 }
 .about-dot {
   display: inline-block;
@@ -1002,26 +1010,26 @@
       <p>Hampshire Quality Plant Hire is a family-run plant hire business operating across the whole of Hampshire. When you call us, you speak directly with the owner — not a booking team or call centre.</p>
       <p>We hire out well-maintained Kubota mini diggers for residential and trade customers who need a machine without the fuss. Whether it's a garden project, drainage run, or groundworks prep, we'll get the right kit to you, when you need it.</p>
      </div>
-    <div class="about-carousel">
-      <div class="about-slide active">
+   <div class="about-carousel">
+      <div class="about-slide active" data-caption="1.7T Kubota Mini Digger">
         <img src="Digger_Photo.jpg" alt="1.7T Kubota Mini Digger">
       </div>
-      <div class="about-slide">
+      <div class="about-slide" data-caption="Before">
         <img src="Before.jpg" alt="Before">
       </div>
-      <div class="about-slide">
+      <div class="about-slide" data-caption="After">
         <img src="After.jpeg" alt="After">
       </div>
       <button class="about-prev" aria-label="Previous">&#8249;</button>
       <button class="about-next" aria-label="Next">&#8250;</button>
-      <div class="about-dots">
-        <span class="about-dot active"></span>
-        <span class="about-dot"></span>
-        <span class="about-dot"></span>
-      </div>
     </div>
-  </div>
-</section>
+    <div class="about-dots">
+      <span class="about-dot active"></span>
+      <span class="about-dot"></span>
+      <span class="about-dot"></span>
+    </div>
+    <p class="about-caption">1.7T Kubota Mini Digger</p>
+</section>  
 
 <!-- ═══ EQUIPMENT ══════════════════════════════════════════════ -->
 <section class="equipment" id="equipment">
@@ -1267,12 +1275,15 @@
   const slides = document.querySelectorAll('.about-slide');
   const dots = document.querySelectorAll('.about-dot');
   let current = 0;
+  const caption = document.querySelector('.about-caption');
   function goTo(n) {
     slides[current].classList.remove('active');
     dots[current].classList.remove('active');
     current = (n + slides.length) % slides.length;
     slides[current].classList.add('active');
     dots[current].classList.add('active');
+    caption.textContent = slides[current].dataset.caption;
+  }
   }
   document.querySelector('.about-prev').addEventListener('click', () => goTo(current - 1));
   document.querySelector('.about-next').addEventListener('click', () => goTo(current + 1));
